@@ -96,32 +96,6 @@ Justificación:
 
 ### Prompt y código
 
-Se desarrollará un prototipo utilizando Python y las APIs de OpenAI:
+Se desarrollará un prototipo utilizando Python y las APIs de OpenAI versión `0.28`.
 
-#### **Ejemplo de código en python**
-
-```python
-import openai
-
-def obtener_recomendaciones_viaje(destino, fecha_inicio, fecha_fin):
-    prompt = f"""
-    Actúa como un asistente de viajes experto. El usuario planea un viaje a {destino} desde {fecha_inicio} hasta {fecha_fin}.
-    1. Sugerir cinco lugares de interés turístico.
-    2. Describir el clima esperado.
-    3. Recomendar el tipo de ropa adecuada.
-    """
-
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "system", "content": prompt}]
-    )
-
-    return response["choices"][0]["message"]["content"]
-
-# Ejemplo de uso
-print(obtener_recomendaciones_viaje("Buenos Aires", "2024-03-20", "2024-03-27"))
-```
-
-Este código genera automáticamente las recomendaciones de viaje basadas en el destino y fechas ingresadas.
-
----
+- Ejemplo de implementación en el archivo `easy-trip-ai.ipynb`
